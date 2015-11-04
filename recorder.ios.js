@@ -99,6 +99,7 @@ var Recorder = React.createClass({
         enabled: true,
         bitrate: 2000000, // 2Mbit/s
         timescale: 1, // Higher than 1 makes a slow motion, between 0 and 1 makes a timelapse effect
+        useFlash: false,
         format: "MPEG4",
         quality: "HighestQuality", // HighestQuality || MediumQuality || LowQuality
         filters: [

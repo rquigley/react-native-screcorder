@@ -58,7 +58,9 @@
    
    // Recorder config
    _recorder.autoSetVideoOrientation = [RCTConvert BOOL:[config objectForKey:@"autoSetVideoOrientation"]];
-   [_recorder setFlashMode:SCFlashModeLight];
+   if ([RCTConvert BOOL:[video objectForKey:@"useFlash"]]) {
+     [_recorder setFlashMode:SCFlashModeLight];
+    }
    
    // Video config
    _recorder.videoConfiguration.enabled = [RCTConvert BOOL:[video objectForKey:@"enabled"]];
